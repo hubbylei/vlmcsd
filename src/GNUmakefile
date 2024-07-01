@@ -509,7 +509,7 @@ endif
 	+$(CC) -x$(COMPILER_LANGUAGE) $(PLATFORMFLAGS) $(BASECFLAGS) $(CFLAGS) $(PLATFORMFLAGS) -MM -MF $*.d $< -MT $@
   endif
   else
-	+@echo "$(COMPILER)	CC	$(notdir $@) <- $<"
+	# +@echo "$(COMPILER)	CC	$(notdir $@) <- $<"
     +@echo "$(COMPILER_LANGUAGE) | $(PLATFORMFLAGS) | $(BASECFLAGS) | $(CFLAGS) | $(PLATFORMFLAGS)"
 	+@$(CC) -x$(COMPILER_LANGUAGE) $(PLATFORMFLAGS) $(BASECFLAGS) $(CFLAGS) $(PLATFORMFLAGS) -c $< -o $@
   ifeq ($(DEPENDENCIES),1)
